@@ -1,24 +1,27 @@
 {
-  "name": "daily-diet-api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "fastify": "^4.23.2",
-    "typescript": "^5.2.2"
-  },
-  "devDependencies": {
-    "@types/node": "^20.6.5",
-    "@typescript-eslint/eslint-plugin": "^6.7.2",
-    "@typescript-eslint/parser": "^6.7.2",
-    "eslint": "^8.50.0",
-    "tsx": "^3.13.0"
-  }
+	"name": "daily-diet-api",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "tsx watch src/server.ts",
+		"knex": "node --no-warnings --loader tsx ./node_modules/.bin/knex --knexfile ./knexfile.ts",
+		"lint": "eslint ./src --fix"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"fastify": "^4.23.2",
+		"knex": "^2.5.1",
+		"typescript": "^5.2.2"
+	},
+	"devDependencies": {
+		"@types/node": "^20.6.5",
+		"@typescript-eslint/eslint-plugin": "^6.7.2",
+		"@typescript-eslint/parser": "^6.7.2",
+		"eslint": "^8.50.0",
+		"sqlite3": "^5.1.6",
+		"tsx": "^3.13.0"
+	}
 }
