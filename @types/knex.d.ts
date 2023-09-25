@@ -10,5 +10,11 @@ declare module 'knex/types/tables' {
             date?: Date,
             onDiet: boolean
         }
+        users: {
+            id: string
+            name: string,
+            email: string
+            password: string
+        }
     }
 }
