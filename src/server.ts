@@ -1,16 +1,6 @@
 import app from './app'
-import { knex } from './database'
-import { mealsRoutes } from './routes/meals'
-import { usersRoutes } from './routes/users'
+import env from './env'
 
-app.get('/', async () => {
-	const test = await knex('sqlite_schema').select('*')
-	return test
-})
-
-app.register(usersRoutes, { prefix: '/users' })
-app.register(mealsRoutes, { prefix: '/meals' })
-
-app.listen({ port: 3333 }).then(() => {
-	console.log('Server running on port 3333')
+app.listen({ port: env.PORT }).then(() => {
+	console.log(`Server running on port ${env.PORT}`)
 })
